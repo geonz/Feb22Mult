@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Okay, this version copied file by file from visualFeb2020mjult-1.  
+    I had succerssfully trimmed some of the awful extra divs, etc.   
+    Now I'm going to try to prune it down to Just Practice The Tens. 
+    Then   ... to have a version w/ pictures but random.
+    Then ... to have a version w/ it on the number chart,
+    and FINALLY to figure out the "reverse chaining" version.   And yea verily I will do this by 2/28/2020.  SO Sayeht the Xious. -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+  <h1>Times Tables Practice In Order: <br>  Identify the fact and its answer. </h1>
+  
+   <h2>The Tens Times Tables.   </h2>
+   <!-- We can put the link to the video on the side.  Find that template with that setup. Tomrrow.   -->
+ <div id= "gridBig">  
+      <!-- this is the big layout for everything on this page but it might be part of a page so I'm giving it its own id.  -->
+
+
+      <!-- 3 divs for 3 buttons.  No CSS assigned to them.  -->
+    <!-- <div id="startButton">
+          <button id="start"  class="button1" onclick="startUp();">Start</button> 
+    </div> -->
+    
+    <div>
+            <button id="first5"  class="button1"  onclick="setToFirst5()">Facts 1-5</button>
+            <button id="startFact"  class="button1" disabled="true" onclick="startUp();">Start fact over</button>
+             
+    </div>
+    <div>
+            <button id="sixThru10"  class="button1"  onclick="setToHigh5();">Facts 6-10 </button>
+<!-- 
+            Here's the button to show up after we start. but not FOR THE JUST TEN VERSOIN -->
+            <!-- <button id="reset"  class="button1" disabled="true" onclick="startOver();">Start All over</button> -->
+    </div><div>
+            <button id="all10"  class="button1"   onclick="setToAll10();">Facts 1-10</button>
+            <p id="p1"></p>
+    </div>
+    
+
+<!-- This is where the visual representation goes.  It can take various forms. Javascript will populate it. -->
+    <section id="multPic" class="centerMult"  > <div>
+      <img src="images/dominoIconTrans.png"alt="blank space" style="min-height:50px;  max-width:100%;max-height:100% ">
+      </div>
+      <!-- <img src= images/dominoIconEmpty.png alt="blank space" style="min-height:50px;  max-width:100%;max-height:100%; "> -->
+    </section>
+       
+        
+
+ <!-- The area where user will enter the first answers.  -->
+    <div class="inputPlace" id="Q1">
+      <!-- the  text asking the question -->
+       <div id ="directions">
+       </div>
+       <!-- the actual expression including the input from the user -->
+       <div id="factor2">         <input type="number" id="factor" placeholder="??" maxlength="2" autofocus  > 
+        </div>
+      
+      </div>
+
+<!-- The div for the button to check the answer to the first part.  -->
+
+    <div   class="checkAnswer"> 
+         <button id="check1"  class="button1" disabled="false" onclick="checkName()"">Check Answer  </button>
+    </div>
+      
+   
+    <div class="inputPlace"  id="A1">         
+           2 x   = <input type="number" id="multAnswer" size="1" maxlength="2" /> 
+    </div>
+      <!-- the div for the button to check the answer -->
+    <!-- <div class="checkAnswer">
+        
+    </div> -->
+      <!-- Feedback -- right or wrong?  -->
+    <div class="feedbackDiv" > 
+      <p id="feedback"></p> 
+       <button id="nextOne" disabled="true" ; class="button1"  onclick="newFact();">Next Fact</button>
+      </div>
+     <div class="feedbackDiv" id="nextFactButton">
+     
+       </div>
+        
+    </div>
+    <!-- another diagnostic div -->
+   
+
+ 
+<!-- Script 2 is the population of the div with the pictures.   If it's in the same script then I couldn't change its properties in the javaScript.  -->
+    <script src="script2.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

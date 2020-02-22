@@ -1,0 +1,144 @@
+div
+{
+  /* border: #4CA450;
+  border-style: dotted;
+  min-height: 30px; */
+}
+ .button1 
+{font-size: 15px;
+  border-radius: 12px;
+  background-color: #4CA450;   
+  display:block;
+   
+  padding: 5px;
+  min-width:70px;
+  min-height: 50px;
+  margin: 15px;
+
+}
+  #feedback
+  {
+    text-align: left;
+    font-size: 20px;
+  }
+
+  #nextOne
+  {
+   margin-left:40px;
+   /* background-color: bisque; */
+
+  }
+.button1:disabled {opacity: 0;}
+
+body {
+  margin:  auto;
+  color: #323232;
+  max-width: 100%;
+  line-height: 1.6;
+  padding: 1em 3em;
+  background-color: #fff;
+  font-family: 'Roboto', serif;
+}
+#gridBig
+{
+  display: inline-grid;
+  grid-template-columns:   repeat(10px, repeat 5,1fr); 
+  
+  grid-template-rows: 20px, 20px, auto auto auto auto;
+  text-align: center;
+  /* this is the whole, big grid.  */
+ 
+}
+.centerMult, .feedbackDiv 
+{ 
+  /* this is where the images will be.  In othe rbranches it will be number chart*/ 
+  text-align:center;
+  /* background-color:palevioletred;  */grid-column-start: 2;  
+  grid-column-end: 5;
+  
+      
+      
+      min-width: 100px;
+}
+      section > div
+{
+  background-color: powderblue;
+   border: 2px solid black;  
+   border-radius: 12px;
+   margin: 2px;
+}
+input
+{
+  font-size: 24px;
+}
+#nextFactButton
+{
+  grid-column-start: 3;
+}
+
+ img
+ {
+   max-width: 100%;
+   height: auto;
+ }
+.centerMult 
+{ 
+  min-width: 200px;
+ display: grid;
+     grid-template-columns: repeat(5, minmax(10px, 1fr));
+      grid-template-rows: repeat(2, minmax(10px, 1fr)); 
+}
+#directions 
+{
+  font-size: 20px;
+    grid-column-start:1;
+    grid-column-end:5; 
+}
+.inputPlace {
+
+     display: inline-grid;
+     grid-template-rows: auto auto;
+    border-radius: 12px;
+      grid-template-columns: 1fr 1fr 1fr; 
+      background-color: powderblue;
+
+      padding: 15px;
+      
+    
+    font-size: 2em;
+    /* I*think* this will be the right size in real life.   also these are the columns for the outer div.  */
+    text-align: center;
+    grid-column-start:2;
+    grid-column-end:5; 
+
+    
+    }
+    #factor2
+    /* that's the 2 x text and input.    */
+    {
+      grid-row: 2; 
+      grid-column-start: 1;
+      grid-column-end:4;
+     /* border: 2px solid #4CA450; */
+    }
+    #factor, #multAnswer, #multAnswer1
+    /* // these are the inputs   */
+    {
+      text-align: right;
+      border-radius: 12px;
+      height: 80px;
+      width:  80px; 
+      /* border: 2px solid rgb(36, 41, 36); */
+
+    }
+    .checkAnswer {
+      /* background-color: gainsboro; */
+      /* border: 4px solid black; */
+        font-size: 3em;
+    text-align: center; 
+    }
+#A1,#check2
+{
+  display: none;
+}
+ 
