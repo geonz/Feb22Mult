@@ -1,8 +1,8 @@
 div
 {
-  /* border: #4CA450;
+  border: #4CA450;
   border-style: dotted;
-  min-height: 30px; */
+  min-height: 30px;
 }
  .button1 
 {font-size: 15px;
@@ -29,7 +29,10 @@ div
 
   }
 .button1:disabled {opacity: 0;}
-
+#livesLeft
+{
+  grid-column-start: 1;
+}
 body {
   margin:  auto;
   color: #323232;
@@ -53,7 +56,8 @@ body {
 { 
   /* this is where the images will be.  In othe rbranches it will be number chart*/ 
   text-align:center;
-  /* background-color:palevioletred;  */grid-column-start: 2;  
+  background-color:palevioletred; 
+  grid-column-start: 1;  
   grid-column-end: 5;
   
       
@@ -137,7 +141,7 @@ input
         font-size: 3em;
     text-align: center; 
     }
-#A1,#check2
+#A1
 {
   display: none;
 }
