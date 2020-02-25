@@ -4,11 +4,13 @@ var minFact = 1;
 // the number you want to practice to... 
 
 var factNum;;// the starting number to be multiplied by; the 'answer'
+var factPoints = 10; 
+// the number of points each right answer generates. 
   // 
   // the order in which the facts will be presented. 0, 1 and ten are "rule based" and should be done before we do this.
- var factSequence=[ 10, 2, 5,4,9,3,6,7,8];
+// var factSequence=[ 10, 2, 5,4,9,3,6,7,8];
 // the initial setting - arrays begin with "0"
-var factIndex=0;
+//var factIndex=0;
 // sets the factSet to the right number.   It will change as we go. 
 //var factSet=factSequence[factIndex];
 
@@ -17,11 +19,22 @@ var factSet=10;
 
 var imgsrc ='<img src= images/icon10.png alt="10 dots like a domino" style="min-height:50px;  max-width:100%;max-height:100%; ">';
 
-// I Am keeping that in its complexity b/c I still need to build the set of those images.   
-
-
-// this changes the times tables fact set to the next in the sequence
-
+ // this is for keeping score visually :)   
+ var score = 0;
+ 
+ function showScore()
+{
+  var s = document.getElementById("scoreBar");
+ var ctx = s.getContext("2d");
+ 
+ctx.fillStyle = "#30d73e";
+ ctx.fillRect(0,0,score, 50);
+ var dude = document.getElementById('score');
+ dude.innerHTML=score ;
+}
+ 
+showScore(); 
+ 
 function setToHigh5()
 {  minFact = 6;
    maxFact=10;
@@ -89,7 +102,7 @@ function newFact()
  
   if (factNum>maxFact)
   {
-  p1.innerHTML= "you're done!" +'<button id="check1" class="button1" onclick="nextFact();">Next Fact</button>';
+  p1.innerHTML= "you're done!";
   } 
 // maybe that should be in "check answer" or in both. 
 else 
@@ -167,7 +180,10 @@ else
   // else    
   //  // need a "next fact" or HERE IS WHERE TO CHANGE IT TO ADD ONE!!! 
   //   {
-        factNum+=1;
+        factNum+=3;
+        score += factPoints;
+        showScore();
+
     feedback.innerHTML="That's right - try the next one!" ; 
     nextOne.disabled=false;
     check1.disabled=true;
@@ -179,60 +195,60 @@ else
     // do better than this -- make it actually diagnostic. 
   }
  // OKAY WE'LL COMMENT THIS OUT WHEN ... OH, WE CAN STICK IT AT THE END SO WE DON'T HAVE TO SCROLL PAST IT. 
-function pickImage(factSet)
-{
-  switch(factSet)
-  {
-    case 2:
-     {imgsrc='<img src= images/icon2.png   alt="2 red dots domino " style="min-height:50px;  max-width:100%;max-height:100%;">';
-     break;}
+// function pickImage(factSet)
+// {
+//   switch(factSet)
+//   {
+//     case 2:
+//      {imgsrc='<img src= images/icon2.png   alt="2 red dots domino " style="min-height:50px;  max-width:100%;max-height:100%;">';
+//      break;}
 
   
-  case 3:
-  {
-    imgsrc='<img src= images/icon3.png   alt="3 red dots domino" style="min-height:50px;max-width:100%;max-height:100%;">';
-    break;
-  }
+//   case 3:
+//   {
+//     imgsrc='<img src= images/icon3.png   alt="3 red dots domino" style="min-height:50px;max-width:100%;max-height:100%;">';
+//     break;
+//   }
 
-  case 4:
-     {imgsrc='<img src= images/icon4.png   alt="4 red dots domino " style="min-height:50px;max-width:100%;max-height:100%;">';
-     break;}
+//   case 4:
+//      {imgsrc='<img src= images/icon4.png   alt="4 red dots domino " style="min-height:50px;max-width:100%;max-height:100%;">';
+//      break;}
 
-     case 5:
-     {imgsrc='<img src= images/icon5.png   alt="5 red dots domino " style="min-height:50px;max-width:100%;max-height:100%;">';
-     break;}
-     case 6:
-     {imgsrc='<img src= images/icon6.png   alt="6 red dots domino " style="min-height:50px;max-width:100%;max-height:100%;">';
-     break;}
+//      case 5:
+//      {imgsrc='<img src= images/icon5.png   alt="5 red dots domino " style="min-height:50px;max-width:100%;max-height:100%;">';
+//      break;}
+//      case 6:
+//      {imgsrc='<img src= images/icon6.png   alt="6 red dots domino " style="min-height:50px;max-width:100%;max-height:100%;">';
+//      break;}
 
-     case 7:
-     {imgsrc='<img src= images/icon7.png   alt="7 red dots domino " style="min-height:50px;max-width:100%;max-height:100%;">';
-     break;}
+//      case 7:
+//      {imgsrc='<img src= images/icon7.png   alt="7 red dots domino " style="min-height:50px;max-width:100%;max-height:100%;">';
+//      break;}
 
-     case 8:
-     {imgsrc='<img src= images/icon8.png   alt="8 red dots domino " style="min-height:50px;max-width:100%;max-height:100%;">';
-     break;}
+//      case 8:
+//      {imgsrc='<img src= images/icon8.png   alt="8 red dots domino " style="min-height:50px;max-width:100%;max-height:100%;">';
+//      break;}
 
-     case 9:
-     {imgsrc='<img src= images/icon9.png   alt="9 red dots domino " style="min-height:50px;max-width:100%;max-height:100%;">';
-     break;}
+//      case 9:
+//      {imgsrc='<img src= images/icon9.png   alt="9 red dots domino " style="min-height:50px;max-width:100%;max-height:100%;">';
+//      break;}
 
-  case 10:
-  {
-    imgsrc='<img src= images/icon10.png alt="10 dots like a domino" style="min-height:50px;  max-width:100%;max-height:100%; ">';
-    break;
-  }
-  default:
-  {imgsrc='<img src= images/dominoIconEmpty.png alt="blank space" style="min-height:50px;  max-width:100%;max-height:100%; ">';
-  multPicHTML +='<div>'+ imgsrc + '</div>';
-      // now make it the HTML
-    multPic.innerHTML=multPicHTML;
-    break;
+//   case 10:
+//   {
+//     imgsrc='<img src= images/icon10.png alt="10 dots like a domino" style="min-height:50px;  max-width:100%;max-height:100%; ">';
+//     break;
+//   }
+//   default:
+//   {imgsrc='<img src= images/dominoIconEmpty.png alt="blank space" style="min-height:50px;  max-width:100%;max-height:100%; ">';
+//   multPicHTML +='<div>'+ imgsrc + '</div>';
+//       // now make it the HTML
+//     multPic.innerHTML=multPicHTML;
+//     break;
 
-  }
-  // Okay, we should have one blank one in there or ten blank ones in there as the default
-}
-}
+//   }
+//   // Okay, we should have one blank one in there or ten blank ones in there as the default
+// }
+// }
 
 } 
 

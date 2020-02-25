@@ -15,7 +15,12 @@
   <body>
   <h1>Times Tables Practice In Order: <br>  Identify the fact and its answer. </h1>
   
-   <h2>The Tens Times Tables.   </h2>
+   <!-- <h2>The Tens Times Tables.   </h2>
+   <svg width="400" height="110">
+  <rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+  Sorry, your browser does not support inline SVG.  
+</svg> -->
+ 
    <!-- We can put the link to the video on the side.  Find that template with that setup. Tomrrow.   -->
  <div id= "gridBig">  
       <!-- this is the big layout for everything on this page but it might be part of a page so I'm giving it its own id.  -->
@@ -40,11 +45,19 @@
             <button id="all10"  class="button1"   onclick="setToAll10();">Facts 1-10</button>
             <p id="p1"></p>
     </div>
-    <div id="score">score here? </div>
+    <div><p>SCORE:</p>   
+    <p id= "score"></p>   
+      <canvas id="scoreBar" width="300" height="50" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+      <!-- <svg width="400" height="110">
+  <rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+  Sorry, your browser does not support inline SVG.  
+</svg> -->
+ <div id="livesLeft"><img src="images/ringbuoytransp.png" id="life1" alt= "rescue ring"><img src="images/ringbuoytransp.png" id="life2" alt= "rescue ring"><img src="images/ringbuoytransp.png" alt= "rescue ring"><p> LIVES LEFT </p></div> </div>
 
 <!-- This is where the visual representation goes.  It can take various forms. Javascript will populate it. -->
     <section id="multPic" class="centerMult"  >
-      <div id="livesLeft"><img src="images/ringbuoytransp.png" alt= "rescue ring"><img src="images/ringbuoytransp.png" alt= "rescue ring"><img src="images/ringbuoytransp.png" alt= "rescue ring"></div>
+      
        <div>
       <img src="images/dominoIconTrans.png"alt="blank space" style="min-height:50px;  max-width:100%;max-height:100% ">
       </div> 
