@@ -2,7 +2,7 @@
 var maxFact = 10; 
 var minFact = 1; 
 // the number you want to practice to... 
-
+var livesleft = 3; 
 var factNum;;// the starting number to be multiplied by; the 'answer'
 var factPoints = 10; 
 // the number of points each right answer generates. 
@@ -16,6 +16,9 @@ var factPoints = 10;
 
 // THIS IS NEW FOR THE SIMPLER ONE FACT VERSION: 
 var factSet=10; 
+var livesLeftImg='<img src= images/ringbuoytransp.png alt="rescue ring" style="min-height:50px;  max-width:100%;max-height:100%; ">'
+
+// var livesLeftImg='<img src=images/ringbuoytransp.png" id="life1" alt= "rescue ring">';
 
 var imgsrc ='<img src= images/icon10.png alt="10 dots like a domino" style="min-height:50px;  max-width:100%;max-height:100%; ">';
 
@@ -119,7 +122,19 @@ else
 createMultImage();
 }
 
+function createLivesImage()
+{
+  let livesLeftHTML="";
 
+ for (let num=1; num<=livesleft; num++)
+ 
+    {livesLeftHTML +='<div>'+ livesLeftImg + '</div>';
+      // now make it the HTML
+    livesLeft.innerHTML=livesLeftHTML;
+    }
+  }
+
+createLivesImage();
 
 function createMultImage()
 {
@@ -156,7 +171,8 @@ else if (b==factNum)
   }
 else
     {
-      feedback.innerHTML="Check your entry; it doesn't seem to be right. I'm just a computer, though..."
+      feedback.innerHTML="Check your entry; it doesn't seem to be right. ";
+
     }
   
 }
@@ -191,7 +207,7 @@ else
     // go to the next one.   
   }
   else{
-    feedback.innerHTML="That doesn't seem to be right.";
+    feedback.innerHTML="";
     // do better than this -- make it actually diagnostic. 
   }
  // OKAY WE'LL COMMENT THIS OUT WHEN ... OH, WE CAN STICK IT AT THE END SO WE DON'T HAVE TO SCROLL PAST IT. 
