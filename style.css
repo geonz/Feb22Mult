@@ -28,20 +28,9 @@ div
    /* background-color: bisque; */
 
   }
-  .button2 
-{font-size: 15px;
-  border-radius: 12px;
-  background-color: #4CA450;   
-  display:block;
-   
-  padding: 5px;
-  min-width:70px;
-  min-height: 50px;
-  margin: 15px;
-
-}
+  
 .button1:disabled {opacity: 0;}
-.button2:disabled{opacity:40};
+#check1:disabled{opacity:40};
 #livesLeft
 {
   grid-column-start: 1;
