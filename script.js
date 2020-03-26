@@ -207,7 +207,19 @@ else
     // go to the next one.   
   }
   else{
-    feedback.innerHTML="";
+    livesleft-=1;
+    if (livesleft<=0)
+    {
+    livesleft=0;    
+ feedback.innerHTML="that doesn't seem to be it, hun, and you've got " + livesleft + " lives left. You can start over though!";
+ 
+ check1.disabled=true;
+ // need a "you'll have to start over."   Disable check naswer.
+    }
+    else 
+{    feedback.innerHTML="that doesn't seem to be it, hun, but you've got " + livesleft + " lives left.";}
+    
+ //check1.disabled=true;
     // do better than this -- make it actually diagnostic. 
   }
  // OKAY WE'LL COMMENT THIS OUT WHEN ... OH, WE CAN STICK IT AT THE END SO WE DON'T HAVE TO SCROLL PAST IT. 
