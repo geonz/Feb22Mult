@@ -2,7 +2,7 @@
 var maxFact = 10; 
 var minFact = 1; 
 // the number you want to practice to... 
-var livesleft = 3; 
+var livesLeft = 3; 
 var factNum;;// the starting number to be multiplied by; the 'answer'
 var factPoints = 10; 
 // the number of points each right answer generates. 
@@ -126,7 +126,7 @@ function createLivesImage()
 {
   let livesLeftHTML="";
 
- for (let num=1; num<=livesleft; num++)
+ for (let num=1; num<=livesLeft; num++)
  
     {livesLeftHTML +='<div>'+ livesLeftImg + '</div>';
       // now make it the HTML
@@ -207,17 +207,17 @@ else
     // go to the next one.   
   }
   else{
-    livesleft-=1;
-    if (livesleft<=0)
+    livesLeft-=1;
+    if (livesLeft<=0)
     {
-    livesleft=0;    
- feedback.innerHTML="that doesn't seem to be it, hun, and you've got " + livesleft + " lives left. You can start over though!";
+    livesLeft=0;    
+ feedback.innerHTML="that doesn't seem to be it, hun, and you've got " + livesLeft + " lives left. You can start over though!";
  
  check1.disabled=true;
  // need a "you'll have to start over."   Disable check naswer.
     }
     else 
-{    feedback.innerHTML="that doesn't seem to be it, hun, but you've got " + livesleft + " lives left.";}
+{    feedback.innerHTML="that doesn't seem to be it, hun, but you've got " + livesLeft + " lives left.";}
     
  //check1.disabled=true;
     // do better than this -- make it actually diagnostic. 
