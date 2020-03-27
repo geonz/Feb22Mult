@@ -2,7 +2,7 @@
 var maxFact = 10; 
 var minFact = 1; 
 // the number you want to practice to... 
-var livesLeft = 3; 
+var livesLeft = 2; 
 var factNum;;// the starting number to be multiplied by; the 'answer'
 var factPoints = 10; 
 // the number of points each right answer generates. 
@@ -220,7 +220,7 @@ else
 {    feedback.innerHTML="that doesn't seem to be it, dearie, but you've got " + livesLeft + " lives left.";}
     
  //check1.disabled=true;
-    // do better than this -- make it actually diagnostic. 
+    createLivesImage();// do better than this -- make it actually diagnostic. 
   }
  // OKAY WE'LL COMMENT THIS OUT WHEN ... OH, WE CAN STICK IT AT THE END SO WE DON'T HAVE TO SCROLL PAST IT. 
 // function pickImage(factSet)
