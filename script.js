@@ -171,7 +171,7 @@ else if (b==factNum)
   }
 else
     {
-      feedback.innerHTML="Check your entry; it doesn't seem to be right. ";
+      feedback.innerHTML="Check your first entry; it doesn't seem to be right. ";
 
     }
   
@@ -217,7 +217,7 @@ else
  // need a "you'll have to start over."   Disable check naswer.
     }
     else 
-{    feedback.innerHTML="that doesn't seem to be it, hun, but you've got " + livesLeft + " lives left.";}
+{    feedback.innerHTML="that doesn't seem to be it, dearie, but you've got " + livesLeft + " lives left.";}
     
  //check1.disabled=true;
     // do better than this -- make it actually diagnostic. 
