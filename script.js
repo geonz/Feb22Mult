@@ -130,7 +130,7 @@ function createLivesImage()
  
     {livesLeftHTML +='<div>'+ livesLeftImg + '</div>';
       // now make it the HTML
-    livesLeft.innerHTML=livesLeftHTML;
+    howManyLives.innerHTML=livesLeftHTML;
     }
   }
 
