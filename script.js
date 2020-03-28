@@ -2,7 +2,7 @@
 var maxFact = 10; 
 var minFact = 1; 
 // the number you want to practice to... 
-var livesLeft = 2; 
+var livesLeft = 3; 
 var factNum;;// the starting number to be multiplied by; the 'answer'
 var factPoints = 10; 
 // the number of points each right answer generates. 
